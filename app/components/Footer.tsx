@@ -2,121 +2,112 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function Footer() {
-  return (
-    <footer className="w-full bg-white pt-20 lg:pt-28 pb-8">
-      <div className="mx-auto px-4 sm:px-6 lg:px-12 w-full max-w-[1400px]">
+    return (
+        <footer className="bg-white text-[#181C1C] pt-24 pb-12 border-t border-[#d8c3ac]/20 font-sans relative overflow-hidden">
 
-        {/* ===== TOP AREA: 4 Kolom ===== */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20 lg:mb-28">
+            {/* Subtle Ambient Glow (Light Mode) */}
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#ffaa00]/5 rounded-full blur-[100px] pointer-events-none -translate-x-1/2 translate-y-1/2"></div>
 
-          {/* Kolom 1: Logo & Alamat */}
-          <div className="flex flex-col items-start">
-            {/* Logo */}
-            <div className="flex flex-col relative pt-2 mb-8">
-              <div className="absolute -top-3 left-[35%] text-gray-800">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2v20" />
-                  <path d="M2 12h20" />
-                  <path d="M4.93 4.93l14.14 14.14" />
-                  <path d="M19.07 4.93L4.93 19.07" />
-                </svg>
-              </div>
-              <div className="text-[24px] font-serif text-gray-900 leading-none tracking-tight">
-                lamonte
-              </div>
-              <div className="text-[6px] font-sans text-gray-500 tracking-[0.45em] uppercase mt-1 text-center">
-                .id
-              </div>
+            <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+
+                {/* Main Footer Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16 mb-20">
+
+                    {/* Brand & Description (Kolom 1 & 2) */}
+                    <div className="lg:col-span-2 flex flex-col items-start justify-start">
+                        {/* Logo Lamonte (Image Version) */}
+                        <div className="mb-6 -ml-1"> {/* Menambahkan -ml-1 untuk kompensasi whitespace kecil pada gambar */}
+                            <img
+                                src="/img/logo.png"
+                                alt="Lamonte Logo"
+                                className="h-12 md:h-14 w-auto object-contain object-left"
+                            />
+                        </div>
+
+                        <p className="text-[#524433] text-sm leading-relaxed max-w-sm mb-8 opacity-70 font-[Inter]">
+                            Pusat grosir pakaian anak termurah dan tangan pertama di Indonesia. Solusi terpercaya untuk stok toko dan paket usaha fashion anak dengan kualitas premium.
+                        </p>
+
+                        {/* Social Media Buttons */}
+                        <div className="flex gap-4">
+                            {['IG', 'FB', 'WA'].map((social) => (
+                                <a
+                                    key={social}
+                                    href="#"
+                                    className="w-10 h-10 bg-[#F1F4F4] border border-[#d8c3ac]/30 hover:border-[#ffaa00] text-[#825500] hover:text-[#ffaa00] flex items-center justify-center rounded-lg text-[10px] font-bold tracking-widest transition-all"
+                                >
+                                    {social}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Links: Layanan Kami */}
+                    <div>
+                        <h4 className="text-[#181C1C] font-bold mb-8 text-sm uppercase tracking-widest">Layanan Kami</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="#" className="text-sm text-[#524433] hover:text-[#825500] transition-colors opacity-70 hover:opacity-100">Grosir & Partai Besar</Link></li>
+                            <li><Link href="#" className="text-sm text-[#524433] hover:text-[#825500] transition-colors opacity-70 hover:opacity-100">Paket Usaha Pemula</Link></li>
+                            <li><Link href="#" className="text-sm text-[#524433] hover:text-[#825500] transition-colors opacity-70 hover:opacity-100">Kemitraan Agen</Link></li>
+                            <li><Link href="#" className="text-sm text-[#524433] hover:text-[#825500] transition-colors opacity-70 hover:opacity-100">Katalog Produk</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Links: Perusahaan */}
+                    <div>
+                        <h4 className="text-[#181C1C] font-bold mb-8 text-sm uppercase tracking-widest">Perusahaan</h4>
+                        <ul className="space-y-4">
+                            <li><Link href="#" className="text-sm text-[#524433] hover:text-[#825500] transition-colors opacity-70 hover:opacity-100">Tentang Kami</Link></li>
+                            <li><Link href="#" className="text-sm text-[#524433] hover:text-[#825500] transition-colors opacity-70 hover:opacity-100">Cara Pemesanan</Link></li>
+                            <li><Link href="#" className="text-sm text-[#524433] hover:text-[#825500] transition-colors opacity-70 hover:opacity-100">Testimoni Mitra</Link></li>
+                            <li><Link href="#" className="text-sm text-[#524433] hover:text-[#825500] transition-colors opacity-70 hover:opacity-100">Hubungi Kami</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Links: Alamat & Kontak */}
+                    <div>
+                        <h4 className="text-[#181C1C] font-bold mb-8 text-sm uppercase tracking-widest">Info Kontak</h4>
+                        <div className="space-y-6">
+                            <div>
+                                <p className="text-[10px] font-bold text-[#825500] uppercase tracking-widest mb-2">Gudang Pusat</p>
+                                <p className="text-xs text-[#524433] leading-relaxed font-[Inter] opacity-70">
+                                    Jl. Pusat Grosir No. 88, Jakarta Pusat,<br />DKI Jakarta 10230
+                                </p>
+                            </div>
+                            <div>
+                                <p className="text-[10px] font-bold text-[#825500] uppercase tracking-widest mb-2">Email & WhatsApp</p>
+                                <p className="text-xs text-[#524433] font-[Inter] opacity-70">
+                                    cs@lamonte.id <br />
+                                    +62 812 3456 7890
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                {/* Bottom Bar: Copyright & Status */}
+                <div className="pt-8 border-t border-[#d8c3ac]/20 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
+                        <p className="text-[10px] font-bold text-[#524433]/50 uppercase tracking-widest">
+                            © {new Date().getFullYear()} Lamonte.id. All rights reserved.
+                        </p>
+                        <div className="flex gap-6">
+                            <Link href="#" className="text-[10px] font-bold text-[#524433]/50 hover:text-[#181C1C] uppercase tracking-widest transition-colors italic">Kebijakan Privasi</Link>
+                            <Link href="#" className="text-[10px] font-bold text-[#524433]/50 hover:text-[#181C1C] uppercase tracking-widest transition-colors italic">Syarat & Ketentuan</Link>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-3 bg-[#F1F4F4] px-4 py-2 rounded-full border border-[#d8c3ac]/30 shadow-sm">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffaa00] opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ffaa00]"></span>
+                        </span>
+                        <span className="text-[10px] text-[#524433] font-bold uppercase tracking-widest">System Operational</span>
+                    </div>
+                </div>
+
             </div>
-
-            <div className="text-[10px] font-sans text-gray-400 uppercase tracking-[0.14em] leading-[2]">
-              Gudang Pusat Lamonte<br />
-              Jl. Pusat Grosir No. 88<br />
-              Jakarta Pusat, DKI Jakarta 10230
-            </div>
-          </div>
-
-          {/* Kolom 2: Services / Layanan */}
-          <div className="flex flex-col items-start">
-            <h4 className="text-[10px] sm:text-[11px] font-bold font-sans text-gray-900 uppercase tracking-[0.2em] mb-6">
-              Layanan Kami
-            </h4>
-            <div className="flex flex-col gap-4">
-              <Link href="#" className="text-[12px] sm:text-[13px] font-sans text-gray-400 uppercase tracking-[0.08em] hover:text-gray-900 transition-colors">
-                Grosir & Partai Besar
-              </Link>
-              <Link href="#" className="text-[12px] sm:text-[13px] font-sans text-gray-400 uppercase tracking-[0.08em] hover:text-gray-900 transition-colors">
-                Paket Usaha Pemula
-              </Link>
-              <Link href="#" className="text-[12px] sm:text-[13px] font-sans text-gray-400 uppercase tracking-[0.08em] hover:text-gray-900 transition-colors">
-                Kemitraan Agen
-              </Link>
-              <Link href="#" className="text-[12px] sm:text-[13px] font-sans text-gray-400 uppercase tracking-[0.08em] hover:text-gray-900 transition-colors">
-                Katalog Produk
-              </Link>
-            </div>
-          </div>
-
-          {/* Kolom 3: Company / Perusahaan */}
-          <div className="flex flex-col items-start">
-            <h4 className="text-[10px] sm:text-[11px] font-bold font-sans text-gray-900 uppercase tracking-[0.2em] mb-6">
-              Perusahaan
-            </h4>
-            <div className="flex flex-col gap-4">
-              <Link href="#" className="text-[12px] sm:text-[13px] font-sans text-gray-400 uppercase tracking-[0.08em] hover:text-gray-900 transition-colors">
-                Tentang Kami
-              </Link>
-              <Link href="#" className="text-[12px] sm:text-[13px] font-sans text-gray-400 uppercase tracking-[0.08em] hover:text-gray-900 transition-colors">
-                Cara Pemesanan
-              </Link>
-              <Link href="#" className="text-[12px] sm:text-[13px] font-sans text-gray-400 uppercase tracking-[0.08em] hover:text-gray-900 transition-colors">
-                Testimoni Mitra
-              </Link>
-              <Link href="#" className="text-[12px] sm:text-[13px] font-sans text-gray-400 uppercase tracking-[0.08em] hover:text-gray-900 transition-colors">
-                Hubungi Kami
-              </Link>
-            </div>
-          </div>
-
-          {/* Kolom 4: Contact / Kontak */}
-          <div className="flex flex-col items-start">
-            <h4 className="text-[10px] sm:text-[11px] font-bold font-sans text-gray-900 uppercase tracking-[0.2em] mb-6">
-              Kontak
-            </h4>
-            <div className="flex flex-col gap-4">
-              <span className="text-[12px] sm:text-[13px] font-sans text-gray-400 tracking-[0.04em]">
-                cs@lamonte.id
-              </span>
-              <span className="text-[12px] sm:text-[13px] font-sans text-gray-400 uppercase tracking-[0.08em]">
-                WhatsApp: +62 812 3456 7890
-              </span>
-            </div>
-            <div className="mt-8 text-[10px] font-sans text-gray-300 uppercase tracking-[0.12em]">
-              Senin – Sabtu: 08:00 – 17:00 WIB
-            </div>
-          </div>
-
-        </div>
-
-        {/* ===== GARIS PEMISAH ===== */}
-        <div className="w-full h-px bg-gray-100 mb-8"></div>
-
-        {/* ===== BOTTOM BAR ===== */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[10px] font-sans text-gray-400 uppercase tracking-[0.12em]">
-            © {new Date().getFullYear()} Lamonte.id. Hak Cipta Dilindungi.
-          </p>
-          <div className="flex items-center gap-8">
-            <Link href="#" className="text-[10px] font-sans text-gray-400 uppercase tracking-[0.12em] hover:text-gray-900 transition-colors italic">
-              Kebijakan Privasi
-            </Link>
-            <Link href="#" className="text-[10px] font-sans text-gray-400 uppercase tracking-[0.12em] hover:text-gray-900 transition-colors italic">
-              Syarat & Ketentuan
-            </Link>
-          </div>
-        </div>
-
-      </div>
-    </footer>
-  );
+        </footer>
+    );
 }

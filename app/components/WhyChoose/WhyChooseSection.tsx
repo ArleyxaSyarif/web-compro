@@ -1,76 +1,101 @@
 import React from 'react';
 
-const reasons = [
-    {
-        title: 'Supplier Tangan Pertama',
-        description:
-            'Mendapatkan harga pabrik termurah tanpa perantara, memberikan margin keuntungan yang jauh lebih besar untuk Anda jual kembali.',
-    },
-    {
-        title: 'Kualitas Premium & Trendy',
-        description:
-            'Menggunakan material pilihan yang aman dan nyaman untuk anak, dipadukan dengan desain yang selalu up-to-date setiap minggunya.',
-    },
-    {
-        title: 'Terpercaya & Berpengalaman',
-        description:
-            'Telah dipercaya oleh ribuan mitra di seluruh Indonesia dengan rekam jejak pengiriman jutaan pcs pakaian secara aman dan tepat waktu.',
-    },
-];
+
 export default function WhyChooseSection() {
+    
     return (
-        <section className="w-full bg-[#FAFAFA] py-24 lg:py-32 overflow-hidden">
-            <div className="mx-auto px-4 sm:px-6 lg:px-12 w-full max-w-[1400px]">
+        
+        <section className="bg-[#F7FAF9] py-24 lg:py-32">
+            <div className="max-w-screen-2xl mx-auto px-6 lg:px-12">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 
-                <div className="flex flex-col xl:flex-row items-start justify-between gap-16 xl:gap-24">
-
-                    {/* ===== KOLOM KIRI (TEKS) ===== */}
-                    <div className="w-full xl:w-1/2 flex flex-col items-start xl:pr-8">
-
-                        {/* Subtitle */}
-                        <div className="text-[10px] sm:text-[11px] font-bold font-sans text-[#C19E70] uppercase tracking-[0.25em] mb-5">
+                    {/* ===== KOLOM KIRI: Sticky Headline ===== */}
+                    <div className="lg:col-span-5 lg:sticky lg:top-40">
+                        <span className="font-[Inter] text-xs tracking-[0.2em] text-[#FFAA00] uppercase mb-6 block font-bold">
                             Keunggulan Lamonte
-                        </div>
-
-                        {/* Heading */}
-                        <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-serif text-gray-900 leading-[1.1] tracking-tight max-w-[460px] mb-14 lg:mb-16">
+                        </span>
+                        <h2 className="font-[Plus_Jakarta_Sans] text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.95] text-[#181C1C] mb-8">
                             Mengapa Ribuan Mitra Memilih Kami
                         </h2>
-                        {/* 3 Items dengan border kiri emas */}
-                        <div className="flex flex-col gap-10 lg:gap-12 w-full max-w-[520px]">
-                            {reasons.map((item, index) => (
-                                <div key={index} className="flex items-start gap-5">
+                        <p className="text-[#524433] text-lg max-w-md leading-relaxed mb-12">
+                            Kami hadir sebagai mitra terpercaya dalam bisnis fashion anak. Pendekatan kami mengutamakan kualitas, harga terbaik, dan layanan yang konsisten untuk setiap mitra.
+                        </p>
+                        <div className="flex flex-col gap-6">
+                            <div className="group flex items-center gap-4 cursor-pointer">
+                                <div className="h-[1px] w-12 bg-[#d8c3ac] group-hover:w-20 group-hover:bg-[#FFAA00] transition-all duration-500"></div>
+                                <span className="font-[Plus_Jakarta_Sans] text-sm font-bold tracking-widest uppercase text-[#181C1C] group-hover:text-[#FFAA00] transition-colors">
+                                    Lihat Katalog Kami
+                                </span>
+                            </div>
+                        </div>
+                    </div>
 
-                                    {/* Gold Left Border Bar */}
-                                    <div className="w-[3px] bg-[#C19E70] flex-shrink-0 self-stretch rounded-full"></div>
+                    {/* ===== KOLOM KANAN: Offset Grid Cards ===== */}
+                    <div className="lg:col-span-7">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                                    {/* Content */}
-                                    <div className="flex flex-col">
-                                        <h3 className="text-[12px] sm:text-[13px] font-bold font-sans text-gray-900 uppercase tracking-[0.14em] mb-3">
-                                            {item.title}
-                                        </h3>
-                                        <p className="text-[14px] sm:text-[15px] font-sans text-gray-400 leading-[1.75]">
-                                            {item.description}
-                                        </p>
+                            {/* Column 1 */}
+                            <div className="flex flex-col gap-8 md:mt-0">
+
+                                {/* Card 1 */}
+                                <div className="bg-[#F1F4F4] p-10 flex flex-col justify-between min-h-[420px] relative overflow-hidden group">
+                                    <div className="absolute top-0 right-0 p-8 text-[#FFAA00]/10 font-[Plus_Jakarta_Sans] text-9xl font-black select-none pointer-events-none">01</div>
+                                    <div className="relative z-10">
+                                        <span className="material-symbols-outlined text-[#FFAA00] text-4xl mb-6 block">storefront</span>
+                                        <h3 className="font-[Plus_Jakarta_Sans] text-2xl font-bold mb-4 text-[#181C1C]">Supplier Tangan Pertama</h3>
+                                        <p className="text-[#524433] leading-relaxed">Mendapatkan harga pabrik termurah tanpa perantara, memberikan margin keuntungan yang jauh lebih besar untuk Anda jual kembali.</p>
                                     </div>
-
+                                    <div className="pt-8 relative z-10">
+                                        <div className="h-1 w-12 bg-[#FFAA00] group-hover:w-full transition-all duration-700 ease-in-out"></div>
+                                    </div>
                                 </div>
-                            ))}
+
+                                {/* Card 2 */}
+                                <div className="bg-[#E0E3E2] p-10 flex flex-col justify-between min-h-[340px] relative overflow-hidden group">
+                                    <div className="absolute top-0 right-0 p-8 text-[#FFAA00]/10 font-[Plus_Jakarta_Sans] text-9xl font-black select-none pointer-events-none">02</div>
+                                    <div className="relative z-10">
+                                        <span className="material-symbols-outlined text-[#FFAA00] text-4xl mb-6 block">diamond</span>
+                                        <h3 className="font-[Plus_Jakarta_Sans] text-2xl font-bold mb-4 text-[#181C1C]">Kualitas Premium & Trendy</h3>
+                                        <p className="text-[#524433] leading-relaxed">Menggunakan material pilihan yang aman dan nyaman untuk anak, dipadukan dengan desain yang selalu up-to-date setiap minggunya.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Column 2 (Offset) */}
+                            <div className="flex flex-col gap-8 md:mt-24">
+
+                                {/* Card 3 */}
+                                <div className="bg-[#F1F4F4] p-10 flex flex-col justify-between min-h-[380px] relative overflow-hidden group">
+                                    <div className="absolute top-0 right-0 p-8 text-[#FFAA00]/10 font-[Plus_Jakarta_Sans] text-9xl font-black select-none pointer-events-none">03</div>
+                                    <div className="relative z-10">
+                                        <span className="material-symbols-outlined text-[#FFAA00] text-4xl mb-6 block">verified</span>
+                                        <h3 className="font-[Plus_Jakarta_Sans] text-2xl font-bold mb-4 text-[#181C1C]">Terpercaya & Berpengalaman</h3>
+                                        <p className="text-[#524433] leading-relaxed">Telah dipercaya oleh ribuan mitra di seluruh Indonesia dengan rekam jejak pengiriman jutaan pcs pakaian secara aman dan tepat waktu.</p>
+                                    </div>
+                                    <div className="pt-8 relative z-10">
+                                        <div className="h-1 w-12 bg-[#FFAA00] group-hover:w-full transition-all duration-700 ease-in-out"></div>
+                                    </div>
+                                </div>
+
+                                {/* Card 4: Dark card dengan gambar */}
+                                <div className="bg-[#181C1C] p-10 flex flex-col justify-between min-h-[460px] relative overflow-hidden group">
+                                    <div className="absolute top-0 right-0 p-8 text-[#FFAA00]/10 font-[Plus_Jakarta_Sans] text-9xl font-black select-none pointer-events-none">04</div>
+                                    <div className="relative z-10">
+                                        <span className="material-symbols-outlined text-[#FFAA00] text-4xl mb-6 block">local_shipping</span>
+                                        <h3 className="font-[Plus_Jakarta_Sans] text-2xl font-bold text-white mb-4">Pengiriman Se-Indonesia</h3>
+                                        <p className="text-[#E0E3E2] leading-relaxed">Melayani pengiriman partai besar ke seluruh pelosok Nusantara dengan pilihan ekspedisi cargo termurah dan terpercaya.</p>
+                                    </div>
+                                    <div className="mt-8 relative z-10">
+                                        <img
+                                            src="/img/img2.png"
+                                            alt="Pengiriman Lamonte"
+                                            className="w-full h-32 object-cover rounded-lg opacity-60 group-hover:opacity-90 transition-opacity duration-500"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
-
-                    {/* ===== KOLOM KANAN (GAMBAR) ===== */}
-                    <div className="w-full xl:w-1/2 relative">
-                        <div className="relative w-full max-w-[600px] mx-auto xl:ml-auto xl:mr-0 border border-gray-100 shadow-sm bg-white">
-                            <img
-                                src="/img/img2.png"
-                                alt="Apparel manufacturing"
-                                className="w-full h-[500px] sm:h-[600px] lg:h-[680px] object-cover object-center"
-                            />
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>

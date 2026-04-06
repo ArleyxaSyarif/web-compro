@@ -3,7 +3,7 @@ import React from 'react';
 const values = [
 {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C19E70" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFAA00" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="7" height="7" rx="1" />
         <rect x="14" y="3" width="7" height="7" rx="1" />
         <rect x="3" y="14" width="7" height="7" rx="1" />
@@ -16,7 +16,7 @@ const values = [
   },
 {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C19E70" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFAA00" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
         <path d="M2 12h20" />
@@ -28,7 +28,7 @@ const values = [
   },
  {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C19E70" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFAA00" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
         <polyline points="22 4 12 14.01 9 11.01" />
       </svg>
@@ -39,7 +39,7 @@ const values = [
   },
 {
     icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C19E70" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFAA00" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
         <polyline points="12 6 12 12 16 14" />
       </svg>
@@ -57,7 +57,7 @@ export default function ValueSection() {
 
         {/* Section Header */}
       <div className="text-center mb-16">
-          <div className="text-[10px] sm:text-[11px] font-bold font-sans text-[#C19E70] uppercase tracking-[0.25em] mb-4">
+          <div className="text-[10px] sm:text-[11px] font-bold font-sans text-[#FFAA00] uppercase tracking-[0.25em] mb-4">
             Mengapa Memilih Kami
           </div>
           <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-serif text-gray-900 leading-[1.15] tracking-tight max-w-[800px] mx-auto">
@@ -73,7 +73,7 @@ export default function ValueSection() {
               className="bg-white border border-gray-100 p-8 lg:p-10 flex flex-col items-start hover:shadow-[0_12px_40px_rgba(0,0,0,0.04)] transition-shadow duration-300"
             >
               {/* Icon */}
-              <div className="mb-8 text-[#C19E70]">
+              <div className="mb-8 text-[#FFAA00]">
                 {item.icon}
               </div>
 
