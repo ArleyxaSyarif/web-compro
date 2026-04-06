@@ -3,24 +3,24 @@ import React from 'react';
 const services = [
     {
         number: '01.',
-        title: 'OEM Manufacturing',
+        title: 'Grosir & Partai Besar',
         description:
-            'Custom apparel production based on your exact specifications, materials, and technical requirements.',
-        features: ['Custom Design Production', 'Rigorous Quality Control'],
+            'Pembelian serian, lusinan, hingga partai besar (bal-balan) dengan jaminan harga tangan pertama langsung dari konveksi.',
+        features: ['Harga Skala Pabrik', 'Pilihan Cargo Termurah'],
     },
     {
         number: '02.',
-        title: 'Private Label',
+        title: 'Paket Usaha Pemula',
         description:
-            'Launch your clothing brand with our full private label services, including branding and retail-ready packaging.',
-        features: ['Custom Branding & Tags', 'Packaging Solutions'],
+            'Solusi praktis bagi Anda yang baru ingin membuka toko. Dapatkan paket bundling berisi kurasi produk-produk best seller yang siap jual.',
+        features: ['Modal Lebih Terjangkau', 'Produk Cepat Laku (Fast Moving)'],
     },
     {
         number: '03.',
-        title: 'Apparel Sourcing',
+        title: 'Kemitraan & Distributor',
         description:
-            'Connecting global buyers with verified factories across Asia, ensuring competitive pricing and reliable supply.',
-        features: ['Factory Matching', 'Cost Negotiation'],
+            'Kuasai pasar fashion anak di kota Anda dengan bergabung menjadi agen resmi atau distributor kami untuk mendapatkan benefit eksklusif.',
+        features: ['Margin Keuntungan Besar', 'Support Materi Promosi'],
     },
 ];
 
@@ -35,18 +35,17 @@ export default function ServiceSection() {
                     {/* Kiri */}
                     <div className="w-full lg:w-1/2">
                         <div className="text-[10px] sm:text-[11px] font-bold font-sans text-[#C19E70] uppercase tracking-[0.25em] mb-5">
-                            Core Capabilities
+                            Layanan Utama Kami
                         </div>
-                        <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-serif text-gray-900 leading-[1.1] tracking-tight max-w-[480px]">
-                            End-to-End Apparel Sourcing Solutions
+                        <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-serif text-gray-900 leading-[1.1] tracking-tight max-w-[500px]">
+                            Solusi Terpadu untuk Sukseskan Bisnis Anda
                         </h2>
                     </div>
 
                     {/* Kanan */}
-                    <div className="w-full lg:w-1/2 flex lg:items-end lg:justify-end pt-18">
+                    <div className="w-full lg:w-1/2 flex lg:items-end lg:justify-end pt-1 lg:pt-18">
                         <p className="text-[15px] sm:text-[16px] font-sans text-gray-400 leading-[1.75] max-w-[480px] lg:text-right">
-                            We provide comprehensive manufacturing and supply chain
-                            services designed to help your brand scale internationally.
+                            Kami menyediakan ekosistem supply chain yang lengkap dan terpercaya untuk membantu UMKM, pemilik toko ritel, hingga agen berkembang pesat di industri fashion anak.
                         </p>
                     </div>
 

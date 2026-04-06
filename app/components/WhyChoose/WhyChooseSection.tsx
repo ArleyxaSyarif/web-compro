@@ -2,22 +2,21 @@ import React from 'react';
 
 const reasons = [
     {
-        title: 'Singapore-Based Hub',
+        title: 'Supplier Tangan Pertama',
         description:
-            'Operating from Singapore provides a trusted international trading structure for global buyers and partners.',
+            'Mendapatkan harga pabrik termurah tanpa perantara, memberikan margin keuntungan yang jauh lebih besar untuk Anda jual kembali.',
     },
     {
-        title: 'Direct Factory Network',
+        title: 'Kualitas Premium & Trendy',
         description:
-            'Access to verified manufacturing partners across Asia, enabling competitive pricing and flexible production.',
+            'Menggunakan material pilihan yang aman dan nyaman untuk anak, dipadukan dengan desain yang selalu up-to-date setiap minggunya.',
     },
     {
-        title: 'Scalable Production',
+        title: 'Terpercaya & Berpengalaman',
         description:
-            'From small boutique batch orders to large-scale mass manufacturing, we adapt to your business needs.',
+            'Telah dipercaya oleh ribuan mitra di seluruh Indonesia dengan rekam jejak pengiriman jutaan pcs pakaian secara aman dan tepat waktu.',
     },
 ];
-
 export default function WhyChooseSection() {
     return (
         <section className="w-full bg-[#FAFAFA] py-24 lg:py-32 overflow-hidden">
@@ -30,14 +29,13 @@ export default function WhyChooseSection() {
 
                         {/* Subtitle */}
                         <div className="text-[10px] sm:text-[11px] font-bold font-sans text-[#C19E70] uppercase tracking-[0.25em] mb-5">
-                            Value Proposition
+                            Keunggulan Lamonte
                         </div>
 
                         {/* Heading */}
                         <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-serif text-gray-900 leading-[1.1] tracking-tight max-w-[460px] mb-14 lg:mb-16">
-                            Why Companies Choose Lumera Global
+                            Mengapa Ribuan Mitra Memilih Kami
                         </h2>
-
                         {/* 3 Items dengan border kiri emas */}
                         <div className="flex flex-col gap-10 lg:gap-12 w-full max-w-[520px]">
                             {reasons.map((item, index) => (

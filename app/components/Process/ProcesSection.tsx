@@ -3,41 +3,41 @@ import React from 'react';
 const steps = [
     {
         number: '01',
-        title: 'Inquiry',
-        description: 'Submit requirements: apparel type, quantity, and specs.',
+        title: 'Pendaftaran',
+        description: 'Hubungi admin kami untuk mendaftar sebagai mitra agen atau reseller.',
         color: '#C19E70',
     },
     {
         number: '02',
-        title: 'Matching',
-        description: 'Identifying suitable factories based on capability and cost.',
+        title: 'Pilih Produk',
+        description: 'Akses katalog terbaru kami dan pilih model baju sesuai kebutuhan pasar.',
     },
     {
         number: '03',
-        title: 'Quotation',
-        description: 'Detailed unit price, MOQ, and lead time details.',
+        title: 'Pemesanan',
+        description: 'Tentukan jumlah pesanan untuk partai besar, seri, atau paket usaha.',
         color: '#C19E70',
     },
     {
         number: '04',
-        title: 'Sampling',
-        description: 'Prototype production for quality and fit approval.',
+        title: 'Pembayaran',
+        description: 'Lakukan pembayaran melalui rekening resmi kami yang aman dan terverifikasi.',
     },
     {
         number: '05',
-        title: 'Production',
-        description: 'Bulk manufacturing begins after sample approval.',
+        title: 'QC & Packing',
+        description: 'Tim kami melakukan pengecekan kualitas (QC) ketat dan pengemasan barang.',
         color: '#C19E70',
     },
     {
         number: '06',
-        title: 'Inspection',
-        description: 'Pre-shipment quality control and check inspection.',
+        title: 'Pengiriman',
+        description: 'Pesanan dikirim ke seluruh Indonesia dengan ekspedisi cargo termurah.',
     },
     {
         number: '07',
-        title: 'Shipment',
-        description: 'Global delivery coordination to client warehouse.',
+        title: 'Siap Jualan',
+        description: 'Barang tiba di toko Anda dan siap dijual untuk meraup keuntungan maksimal.',
         color: '#C19E70',
     },
 ];
@@ -50,10 +50,10 @@ export default function ProcessSection() {
                 {/* Section Header */}
                 <div className="text-center mb-16 lg:mb-20">
                     <div className="text-[10px] sm:text-[11px] font-bold font-sans text-[#C19E70] uppercase tracking-[0.25em] mb-4">
-                        Our Workflow
+                        Alur Pemesanan
                     </div>
                     <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] font-serif text-gray-900 leading-[1.15] tracking-tight">
-                        End-to-End Sourcing Process
+                        Langkah Mudah Belanja di Lamonte
                     </h2>
                 </div>
 

@@ -17,29 +17,26 @@ export default function HeroSection() {
 
                         {/* Top Subtitle */}
                         <div className="text-[10px] sm:text-[11px] font-bold font-sans text-[#C19E70] uppercase tracking-[0.2em] mb-5">
-                            Global Apparel Sourcing & Trading Hub
+                            Pusat Grosir Baju Anak Terlengkap
                         </div>
 
                         {/* Main Headline (Judul Besar) */}
                         <h1 className="text-[44px] sm:text-[56px] lg:text-[72px] font-serif text-gray-900 leading-[1.05] mb-6 tracking-tight max-w-[620px]">
-                            Buka Toko Baju <br />
-                            {/* Premium Factories miring (italic) dan berwarna emas seperti di desain */}
-                            <span className="italic font-serif text-[#C19E70]">Anak dengan Sistem Siap Pakai</span> <br />
-                            Rasakan Punya Brand Sendiri
+                            Tumbuh Berkembang <br />
+                            <span className="italic font-serif text-[#C19E70]">Lebih Cepat</span> <br />
+                            Bersama Lamonte.
                         </h1>
 
-                        {/* Paragraph Description */}
                         <p className="text-gray-500 font-sans text-[15px] sm:text-[16px] leading-[1.7] max-w-[540px] mb-10">
-                            Tanpa pusing produksi, tanpa stok numpuk, tanpa perang harga. Lamonte siapkan stok premium + sistem marketing otomatis. Kamu fokus jualan, tim kami yang backup.
+                            Lamonte adalah pusat grosir pakaian anak termurah dan tangan pertama di Indonesia. Kami hadir untuk membantu Anda memulai dan membesarkan bisnis fashion anak dengan produk berkualitas, tren terbaru, dan keuntungan maksimal.
                         </p>
-
                         {/* Action Buttons */}
                         <div className="flex flex-col sm:flex-row items-center gap-4 mb-16 w-full sm:w-auto mt-2">
                             <button className="w-full sm:w-auto bg-[#C19E70] text-white px-8 py-[15px] text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-[#a6865c] transition-colors">
-                                Work With Us
+                                Daftar Mitra
                             </button>
                             <button className="w-full sm:w-auto bg-white text-[#6B7280] border border-gray-200 px-8 py-[15px] text-[11px] font-bold uppercase tracking-[0.15em] hover:border-gray-400 hover:text-gray-900 transition-colors">
-                                Our Services
+                                Lihat Katalog
                             </button>
                         </div>
 
@@ -47,15 +44,15 @@ export default function HeroSection() {
                         <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-[9px] sm:text-[10px] font-bold font-sans text-[#9CA3AF] uppercase tracking-[0.15em]">
                             <div className="flex items-center gap-2.5">
                                 <div className="w-[5px] h-[5px] sm:w-1.5 sm:h-1.5 rounded-full bg-[#C19E70]"></div>
-                                Singapore Registered
+                                Harga Tangan Pertama
                             </div>
                             <div className="flex items-center gap-2.5">
                                 <div className="w-[5px] h-[5px] sm:w-1.5 sm:h-1.5 rounded-full bg-[#C19E70]"></div>
-                                Asia Factory Network
+                                Kualitas Premium
                             </div>
                             <div className="flex items-center gap-2.5">
                                 <div className="w-[5px] h-[5px] sm:w-1.5 sm:h-1.5 rounded-full bg-[#C19E70]"></div>
-                                OEM & Private Label
+                                100% Terpercaya
                             </div>
                         </div>
 
@@ -76,14 +73,15 @@ export default function HeroSection() {
 
                             {/* Floating Experience Box (Box melayang di pojok kiri bawah) */}
                             {/* Pengaturan absolute ini khusus untuk menyerupai tata letak desain aslinya */}
+                            {/* Floating Experience Box (Box melayang di pojok kiri bawah) */}
                             <div className="absolute -left-4 sm:-left-8 lg:-left-16 -bottom-6 sm:bottom-4 lg:bottom-10 bg-white p-8 lg:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)] z-10 w-[190px] sm:w-[220px]">
-                                {/* 20+ */}
+                                {/* 1500+ */}
                                 <div className="text-[40px] sm:text-[46px] font-serif text-[#C19E70] leading-none mb-3 sm:mb-4 flex items-start">
-                                    20<span className="text-[30px] sm:text-[34px] font-sans font-light relative top-[-4px] ml-1">+</span>
+                                    1500<span className="text-[30px] sm:text-[34px] font-sans font-light relative top-[-4px] ml-1">+</span>
                                 </div>
-                                {/* Years Industry Experience */}
+                                {/* Mitra & Reseller */}
                                 <div className="text-[9px] sm:text-[10px] font-bold font-sans text-gray-400 uppercase tracking-[0.2em] leading-[1.6]">
-                                    Years Industry <br /> Experience
+                                    Mitra & Reseller <br /> Telah Bergabung
                                 </div>
                             </div>
 

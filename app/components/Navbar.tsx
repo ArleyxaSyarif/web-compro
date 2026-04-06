@@ -20,44 +20,44 @@ export default function Navbar() {
                             </svg>
                         </div>
 
-                        {/* Teks "lumera" dengan font serif agar persis seperti gambar */}
+                        {/* Teks "lamonte" dengan font serif agar persis seperti gambar */}
                         <div className="text-[28px] md:text-[32px] font-serif text-gray-900 leading-none tracking-tight">
-                            lumera
+                            lamonte
                         </div>
 
-                        {/* Teks "GLOBAL" berukuran kecil dengan spasi sangat jauh */}
+                        {/* Teks ".ID" berukuran kecil dengan spasi sangat jauh */}
                         <div className="text-[7px] font-sans text-gray-600 tracking-[0.45em] uppercase mt-1 pl-[2px] text-center">
-                            Global
+                            .id
                         </div>
                     </div>
 
                     {/* 2. Center Navigation Links */}
                     <nav className="hidden lg:flex space-x-12 ml-8 xl:ml-20">
-                        <Link href="#services" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
-                            Services
+                        <Link href="#layanan" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
+                            Layanan
                         </Link>
-                        <Link href="#why-us" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
-                            Why Us
+                        <Link href="#keunggulan" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
+                            Keunggulan
                         </Link>
-                        <Link href="#clients" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
-                            Clients
+                        <Link href="#mitra" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
+                            Mitra Kami
                         </Link>
-                        <Link href="#process" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
-                            Process
+                        <Link href="#cara-pesan" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
+                            Cara Pesan
                         </Link>
-                        <Link href="#contact" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
-                            Contact
+                        <Link href="#kontak" className="text-[11px] font-bold font-sans text-[#6B7280] uppercase tracking-[0.18em] hover:text-gray-900 transition-colors">
+                            Kontak
                         </Link>
                     </nav>
 
-                    {/* 3. CTA Button (Request Quote) */}
+                    {/* 3. CTA Button */}
                     <div className="hidden md:flex items-center">
                         {/* Tombol tanpa rounded (kotak) bewarna gold-kusam menyerupai gambar */}
                         <Link
-                            href="#quote"
+                            href="#kontak"
                             className="bg-[#C19E70] text-white px-8 py-[14px] text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-[#a6865c] transition-colors"
                         >
-                            Request Quote
+                            Hubungi Admin
                         </Link>
                     </div>
 
