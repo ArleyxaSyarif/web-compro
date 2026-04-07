@@ -16,12 +16,13 @@ export default function Navbar() {
     }, [isMenuOpen, isContactModalOpen]);
 
     const navLinks = [
-        { name: 'Service', href: '/' },
-        { name: 'Why us', href: '#keunggulan' },
-        { name: 'Clients', href: '#mitra' },
-        { name: 'Process', href: '#cara-pesan' },
-        { name: 'Contact', href: '/kontak' },
+        { name: 'Service', href: '#service' },
+        { name: 'Why us', href: '#why-us' },
+        { name: 'Clients', href: '#clients' },
+        { name: 'Process', href: '#process' },
+        { name: 'Contact', href: '#contact' },
     ];
+
 
     return (
         <>
