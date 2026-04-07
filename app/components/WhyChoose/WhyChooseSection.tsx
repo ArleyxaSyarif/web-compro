@@ -59,7 +59,7 @@ export default function WhyChooseSection() {
             <div className="w-full lg:w-[40%] flex items-center justify-end">
                 <div className="relative w-full max-w-[580px] aspect-[4/5] bg-white p-3 md:p-4 shadow-[0_32px_80px_rgba(0,0,0,0.06)] rounded-xl overflow-hidden">
                     <img
-                        src="/img/img2.png"
+                        src="/img/apparelHero.png"
                         alt="Clothing manufacturing process"
                         className="w-full h-full object-cover grayscale brightness-95"
                     />

@@ -83,7 +83,7 @@ export default function HeroSection() {
                 {/* Main Hero Image */}
                 <div className="relative w-full max-w-[550px] aspect-[4/5] rounded-xl overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.07)] bg-white p-2 lg:p-3 z-10">
                     <img
-                        src="/img/img1.png"
+                        src="/img/apparelHero2.png"
                         alt="Connecting Premium Factories"
                         className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-1000"
                     />
