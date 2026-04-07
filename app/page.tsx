@@ -5,17 +5,19 @@ import ServiceSection from "./components/Service/ServiceSection";
 import WhyChooseSection from "./components/WhyChoose/WhyChooseSection";
 import ProcessSection from "./components/Process/ProcesSection";
 import PartnerSection from "./components/Partner/PartnerSection";
+import ContactSection from "./components/Contact/ContactSection";
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
-      
+
       <PartnerSection />
       <ValueSection />
       <ServiceSection />
       <WhyChooseSection />
       <ProcessSection />
+      <ContactSection />
     </div>
   );
 }

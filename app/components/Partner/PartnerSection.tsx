@@ -36,10 +36,10 @@ export default function Partnerships() {
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     {/* Judul menggunakan warna #ffaa00 dengan spasi antar huruf yang lebar */}
-                    <h2 className="font-[Inter] text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#ffaa00] font-bold flex items-center justify-center gap-4">
-                        <span className="h-[1px] w-8 bg-[#ffaa00]/30 hidden md:block"></span>
-                        Telah Dipercaya Oleh Mitra Kami
-                        <span className="h-[1px] w-8 bg-[#ffaa00]/30 hidden md:block"></span>
+                    <h2 className="font-[Inter] text-[10px] md:text-xs uppercase tracking-[0.4em] text-[#c9a96e] font-bold flex items-center justify-center gap-4">
+                        <span className="h-[1px] w-8 bg-[#c9a96e]/30 hidden md:block"></span>
+                        Trusted by Our Partners
+                        <span className="h-[1px] w-8 bg-[#c9a96e]/30 hidden md:block"></span>
                     </h2>
                 </div>
 

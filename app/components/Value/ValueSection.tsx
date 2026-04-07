@@ -3,35 +3,35 @@ import React from 'react';
 const values = [
     {
         icon: (
-            <span className="material-symbols-outlined text-4xl">inventory_2</span>
+            <span className="material-symbols-outlined text-4xl">domain</span>
         ),
-        title: 'Koleksi Terlengkap',
+        title: 'Based in Singapore SG',
         description:
-            'Menyediakan ribuan model pakaian anak dengan desain terbaru dan up-to-date yang siap memenuhi kebutuhan etalase toko Anda.',
+            'A registered Singapore trading company providing reliable global sourcing and supply chain solutions with full credibility.',
     },
     {
         icon: (
             <span className="material-symbols-outlined text-4xl">public</span>
         ),
-        title: 'Pengiriman Nasional',
+        title: 'Asia Factory Network',
         description:
-            'Melayani pengiriman partai besar ke seluruh pelosok Nusantara dengan pilihan ekspedisi cargo termurah dan terpercaya.',
+            'Direct access to trusted factories across Vietnam, China, Indonesia, and major manufacturing hubs in Asia.',
     },
     {
         icon: (
-            <span className="material-symbols-outlined text-4xl">payments</span>
+            <span className="material-symbols-outlined text-4xl">verified</span>
         ),
-        title: 'Harga Tangan Pertama',
+        title: '20+ Years Experience',
         description:
-            'Jaminan harga grosir termurah langsung dari konveksi. Memberikan margin keuntungan yang maksimal untuk para mitra bisnis kami.',
+            'Strong industry expertise in apparel sourcing, production coordination, and global wholesale supply chain.',
     },
     {
         icon: (
-            <span className="material-symbols-outlined text-4xl">support_agent</span>
+            <span className="material-symbols-outlined text-4xl">schedule</span>
         ),
-        title: 'Layanan Cepat Tanggap',
+        title: 'Global Logistics',
         description:
-            'Tim customer support yang profesional siap membantu proses pemesanan, pengecekan stok, hingga tracking pengiriman Anda.',
+            'End-to-end coordination from the factory production floor to international shipment and final delivery.',
     },
 ];
 
@@ -52,15 +52,16 @@ export default function ValueSection() {
 
                 {/* Section Header */}
                 <div className="text-center mb-20">
-                    <div className="text-[10px] font-bold font-[Inter] text-[#ffaa00] uppercase tracking-[0.4em] mb-4 flex items-center justify-center gap-4">
-                        <span className="h-[1px] w-8 bg-[#ffaa00]/30"></span>
-                        Mengapa Memilih Kami
-                        <span className="h-[1px] w-8 bg-[#FFAA00]/30 "></span>
+                    <div className="text-[10px] font-bold font-[Inter] text-[#C19E70] uppercase tracking-[0.4em] mb-4 flex items-center justify-center gap-4">
+                        <span className="h-[1px] w-8 bg-[#C19E70]/30"></span>
+                        Value Proposition
+                        <span className="h-[1px] w-8 bg-[#C19E70]/30 "></span>
                     </div>
-                    {/* Judul: Warna gelap dengan aksen #ffaa00 pada "Pakaian Anak" */}
-                    <h2 className="text-[36px] md:text-[52px] font-[Plus_Jakarta_Sans] font-black text-[#181C1C] leading-[1.1] tracking-tight max-w-[800px] mx-auto">
-                        Mitra Terbaik Bisnis <span className="text-[#FFAA00]">Pakaian Anak</span> Anda
+                    {/* Judul: Font Serif dengan aksen #C19E70 */}
+                    <h2 className="text-[28px] md:text-[42px] font-serif text-[#181C1C] leading-[1.1] tracking-tight max-w-[800px] mx-auto">
+                        Trusted Global Apparel Sourcing Partner
                     </h2>
+
                 </div>
 
                 {/* 4 Cards Grid */}
@@ -68,20 +69,20 @@ export default function ValueSection() {
                     {values.map((item, index) => (
                         <div
                             key={index}
-                            className="group bg-white border border-[#d8c3ac]/10 p-10 flex flex-col items-start hover:shadow-[0_30px_60px_rgba(130,85,0,0.06)] transition-all duration-500 rounded-[2rem] relative overflow-hidden"
+                            className="group bg-white border border-[#d8c3ac]/10 p-10 flex flex-col items-start hover:shadow-[0_30px_60px_rgba(193,158,112,0.1)] transition-all duration-500 rounded-[2rem] relative overflow-hidden"
                         >
                             {/* Decorative number background */}
-                            <div className="absolute -top-4 -right-2 text-[100px] font-black font-[Plus_Jakarta_Sans] text-[#F1F4F4]/50 select-none group-hover:text-[#FFAA00]/5 transition-colors duration-500">
+                            <div className="absolute -top-4 -right-2 text-[100px] font-black font-[Plus_Jakarta_Sans] text-[#F1F4F4]/50 select-none group-hover:text-[#C19E70]/5 transition-colors duration-500">
                                 0{index + 1}
                             </div>
 
                             {/* Icon Container */}
-                            <div className="mb-10 w-16 h-16 bg-[#F1F4F4]/50 rounded-2xl flex items-center justify-center text-[#FFAA00] group-hover:bg-[#FFAA00] group-hover:text-white transition-all duration-500">
+                            <div className="mb-10 w-16 h-16 bg-[#F1F4F4]/50 rounded-2xl flex items-center justify-center text-[#C19E70] group-hover:bg-[#C19E70] group-hover:text-white transition-all duration-500">
                                 {item.icon}
                             </div>
 
                             {/* Title (Plus Jakarta Sans) */}
-                            <h3 className="text-[12px] font-bold font-[Plus_Jakarta_Sans] text-[#181C1C] uppercase tracking-[0.15em] mb-4 group-hover:text-[#825500] transition-colors">
+                            <h3 className="text-[12px] font-bold font-[Plus_Jakarta_Sans] text-[#181C1C] uppercase tracking-[0.15em] mb-4 group-hover:text-[#a6865c] transition-colors">
                                 {item.title}
                             </h3>
 
@@ -91,7 +92,7 @@ export default function ValueSection() {
                             </p>
 
                             {/* Subtle line at bottom */}
-                            <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#FFAA00] transition-all duration-500 group-hover:w-full"></div>
+                            <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-[#C19E70] transition-all duration-500 group-hover:w-full"></div>
                         </div>
                     ))}
                 </div>
@@ -100,4 +101,3 @@ export default function ValueSection() {
         </section>
     );
 }
-
