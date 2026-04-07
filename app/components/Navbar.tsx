@@ -39,7 +39,7 @@ export default function Navbar() {
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
-                
+
                 setIsMenuOpen(false); // Tutup menu mobile
             }
         }
@@ -51,15 +51,15 @@ export default function Navbar() {
                 <div className="w-full mx-auto px-6 md:px-16 lg:px-24 flex justify-between items-center h-24">
 
                     {/* 1. LOGO SECTION */}
-                    <Link href="/" className="flex-shrink-0 flex flex-col items-start group cursor-pointer relative z-[60] text-[#181C1C]">
+                    <Link href="/" className="flex-shrink-0 flex flex-col items-center group cursor-pointer relative z-[60] text-[#181C1C] transition-transform duration-300 group-hover:scale-105 pt-2">
+                        <span className="material-symbols-outlined text-sm mb-1" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24" }}>
+                            asterisk
+                        </span>
                         <div className="flex flex-col items-center leading-none">
-                            <span className="material-symbols-outlined text-xl mb-0.5 text-[#181C1C]" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>
-                                brightness_low
-                            </span>
-                            <span className="text-[24px] font-serif font-bold tracking-tight text-[#181C1C]">
+                            <span className="text-[26px] font-serif tracking-tight">
                                 lumera
                             </span>
-                            <span className="text-[9px] font-sans text-[#c9a675] font-bold uppercase tracking-[0.4em] mt-0.5">
+                            <span className="text-[8px] font-sans text-gray-600 uppercase tracking-[0.45em] mt-1 pl-[2px] text-center w-full">
                                 Global
                             </span>
                         </div>
