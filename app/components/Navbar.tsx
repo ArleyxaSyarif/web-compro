@@ -36,7 +36,7 @@ export default function Navbar() {
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
-                
+
                 setIsMenuOpen(false);
             }
         }
@@ -49,10 +49,20 @@ export default function Navbar() {
                 <div className="w-full mx-auto px-6 md:px-16 lg:px-24 flex justify-between items-center transition-all duration-300">
 
                     {/* LOGO - Selalu di atas (z-70) */}
-                    <Link href="/" className="relative z-[110] flex flex-col items-start text-[#181C1C]">
+                    <Link href="/" className="flex-shrink-0 flex flex-col items-center group cursor-pointer relative z-[110] text-[#181C1C] transition-transform duration-300 hover:scale-105">
+                        {/* Ikon Asterisk yang lebih kecil */}
+                        <span className="material-symbols-outlined text-[10px] mb-0.5 opacity-50" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300" }}>
+                            asterisk
+                        </span>
                         <div className="flex flex-col items-center leading-none">
-                            <span className="text-[20px] md:text-[24px] font-serif font-bold tracking-tight">lumera</span>
-                            <span className="text-[8px] md:text-[9px] font-sans text-[#c9a675] font-bold uppercase tracking-[0.4em] mt-0.5">Global</span>
+                            {/* Nama Brand yang lebih ramping */}
+                            <span className="text-[20px] font-serif font-bold tracking-tight">
+                                lumera
+                            </span>
+                            {/* Sub-text yang lebih halus */}
+                            <span className="text-[7px] font-sans font-bold uppercase tracking-[0.5em] mt-0.5 ml-[0.5em] text-center">
+                                Global
+                            </span>
                         </div>
                     </Link>
 
@@ -85,8 +95,8 @@ export default function Navbar() {
                         </button>
 
                         {/* Burger Icon Custom */}
-                        <button 
-                            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="p-2 text-[#181C1C] lg:hidden flex flex-col items-end gap-1.5 focus:outline-none"
                             aria-label="Toggle Menu"
                         >
@@ -98,16 +108,15 @@ export default function Navbar() {
                 </div>
 
                 {/* MODAL FULL-SCREEN MOBILE MENU */}
-                <div 
-                    className={`fixed inset-0 bg-white z-[105] lg:hidden transition-all duration-500 ease-in-out ${
-                        isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
-                    }`}
+                <div
+                    className={`fixed inset-0 bg-white z-[105] lg:hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+                        }`}
                 >
                     {/* Interior Mobile Menu */}
                     <div className="flex flex-col h-full pt-32 pb-12 px-8 relative overflow-y-auto">
-                        
+
                         {/* Background subtle grid agar selaras dengan Hero */}
-                        <div 
+                        <div
                             className="absolute inset-0 opacity-[0.03] pointer-events-none"
                             style={{
                                 backgroundImage: `linear-gradient(#181C1C 1px, transparent 1px), linear-gradient(90deg, #181C1C 1px, transparent 1px)`,
@@ -117,16 +126,15 @@ export default function Navbar() {
 
                         <div className="relative z-10 flex flex-col h-full">
                             <span className="text-[#c9a675] font-sans font-bold tracking-[0.3em] text-[10px] uppercase mb-8 opacity-60">Navigation</span>
-                            
+
                             <nav className="flex flex-col gap-6 mb-12">
                                 {navLinks.map((link, i) => (
                                     <Link
                                         key={link.name}
                                         href={link.href}
                                         onClick={(e) => handleScroll(e, link.href)}
-                                        className={`text-4xl font-serif font-bold text-[#181C1C] transition-all duration-700 transform ${
-                                            isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
-                                        }`}
+                                        className={`text-4xl font-serif font-bold text-[#181C1C] transition-all duration-700 transform ${isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
+                                            }`}
                                         style={{ transitionDelay: `${i * 75}ms` }}
                                     >
                                         {link.name}
@@ -134,16 +142,15 @@ export default function Navbar() {
                                 ))}
                             </nav>
 
-                            <div className={`mt-auto pt-8 border-t border-[#181C1C]/5 transition-all duration-700 delay-[400ms] ${
-                                isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                            }`}>
+                            <div className={`mt-auto pt-8 border-t border-[#181C1C]/5 transition-all duration-700 delay-[400ms] ${isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                                }`}>
                                 <div className="mb-10">
                                     <h4 className="text-[10px] font-sans font-bold tracking-[0.2em] text-[#c9a675] uppercase mb-4">Contact Details</h4>
                                     <p className="text-xl font-serif text-[#181C1C] mb-1">lumerasgp@gmail.com</p>
                                     <p className="text-xl font-serif text-[#181C1C]">+65 9084 6600</p>
                                 </div>
-                                
-                                <button 
+
+                                <button
                                     onClick={() => {
                                         const contactElem = document.getElementById('contact');
                                         setIsMenuOpen(false);
