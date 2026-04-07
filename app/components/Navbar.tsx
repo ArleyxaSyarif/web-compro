@@ -4,16 +4,15 @@ import Link from 'next/link';
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
-    // Mencegah scroll body saat modal/menu terbuka
+    // Mencegah scroll body saat menu terbuka agar tidak "double scroll"
     useEffect(() => {
-        if (isMenuOpen || isContactModalOpen) {
+        if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'unset';
         }
-    }, [isMenuOpen, isContactModalOpen]);
+    }, [isMenuOpen]);
 
     const navLinks = [
         { name: 'Service', href: '#service' },
@@ -23,15 +22,13 @@ export default function Navbar() {
         { name: 'Contact', href: '#contact' },
     ];
 
-    // Fungsi Smooth Scroll Manual (Bulletproof untuk React/Next.js)
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         if (href.startsWith('#')) {
             e.preventDefault();
             const targetId = href.replace('#', '');
             const elem = document.getElementById(targetId);
             if (elem) {
-                // Menghitung posisi scroll (dikurangi tinggi navbar agar tidak tertutup)
-                const offset = 96; // Tinggi h-24 (96px)
+                const offset = 80;
                 const elementPosition = elem.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -39,94 +36,126 @@ export default function Navbar() {
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
-
-                setIsMenuOpen(false); // Tutup menu mobile
+                
+                setIsMenuOpen(false);
             }
         }
     };
 
     return (
         <>
-            <header className="bg-white/90 backdrop-blur-xl fixed top-0 z-50 w-full border-b border-[#181C1C]/5 transition-all duration-300">
-                <div className="w-full mx-auto px-6 md:px-16 lg:px-24 flex justify-between items-center h-24">
+            {/* Navigasi Utama */}
+            <header className="bg-white fixed top-0 z-[100] w-full border-b border-[#181C1C]/5 h-20 md:h-24 flex items-center">
+                <div className="w-full mx-auto px-6 md:px-16 lg:px-24 flex justify-between items-center transition-all duration-300">
 
-                    {/* 1. LOGO SECTION */}
-                    <Link href="/" className="flex-shrink-0 flex flex-col items-center group cursor-pointer relative z-[60] text-[#181C1C] transition-transform duration-300 group-hover:scale-105 pt-2">
-                        <span className="material-symbols-outlined text-sm mb-1" style={{ fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24" }}>
-                            asterisk
-                        </span>
+                    {/* LOGO - Selalu di atas (z-70) */}
+                    <Link href="/" className="relative z-[110] flex flex-col items-start text-[#181C1C]">
                         <div className="flex flex-col items-center leading-none">
-                            <span className="text-[26px] font-serif tracking-tight">
-                                lumera
-                            </span>
-                            <span className="text-[8px] font-sans text-gray-600 uppercase tracking-[0.45em] mt-1 pl-[2px] text-center w-full">
-                                Global
-                            </span>
+                            <span className="text-[20px] md:text-[24px] font-serif font-bold tracking-tight">lumera</span>
+                            <span className="text-[8px] md:text-[9px] font-sans text-[#c9a675] font-bold uppercase tracking-[0.4em] mt-0.5">Global</span>
                         </div>
                     </Link>
 
-                    {/* 2. NAVIGATION LINKS (Desktop) */}
+                    {/* DESKTOP MENU */}
                     <nav className="hidden lg:flex items-center gap-12">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
                                 onClick={(e) => handleScroll(e, link.href)}
-                                className="text-[11px] font-bold font-sans text-[#181C1C] uppercase tracking-[0.2em] hover:text-[#c9a675] transition-colors relative"
+                                className="text-[11px] font-bold font-sans text-[#181C1C] uppercase tracking-[0.2em] hover:text-[#c9a675] transition-colors"
                             >
                                 {link.name}
                             </Link>
                         ))}
                     </nav>
 
-                    {/* 3. RIGHT SECTION (Toggle & Button) */}
-                    <div className="flex items-center gap-6 relative z-[60]">
-                        {/* Visual Theme Toggle */}
-                        <div className="hidden sm:flex items-center bg-[#F1F4F4] p-1 rounded-full border border-[#181C1C]/5">
-                            <div className="p-1.5 px-3 rounded-full bg-white text-[#c9a675] shadow-sm flex items-center justify-center">
-                                <span className="material-symbols-outlined text-[18px]">light_mode</span>
-                            </div>
-                            <div className="p-1.5 px-3 rounded-full text-[#181C1C] flex items-center justify-center opacity-30">
-                                <span className="material-symbols-outlined text-[18px]">dark_mode</span>
-                            </div>
-                        </div>
-
-                        {/* CTA Button */}
+                    {/* RIGHT SIDE ACTIONS */}
+                    <div className="flex items-center gap-4 relative z-[110]">
                         <button
                             onClick={() => {
                                 const contactElem = document.getElementById('contact');
                                 if (contactElem) {
-                                    window.scrollTo({ top: contactElem.offsetTop - 96, behavior: 'smooth' });
+                                    window.scrollTo({ top: contactElem.offsetTop - 80, behavior: 'smooth' });
                                 }
                             }}
-                            className="hidden md:block px-10 py-4 text-[11px] font-sans font-bold tracking-[0.2em] bg-[#c9a675] text-white rounded-xl hover:bg-[#181C1C] hover:shadow-2xl transition-all duration-500 uppercase shadow-lg shadow-[#c9a675]/20 mr-8"
+                            className="hidden md:block px-8 py-3.5 text-[10px] font-sans font-bold tracking-[0.2em] bg-[#c9a675] text-white rounded-xl hover:bg-[#181C1C] transition-all duration-500 uppercase shadow-lg shadow-[#c9a675]/20"
                         >
                             Request Quote
                         </button>
 
-                        {/* Mobile Menu Trigger */}
-                        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden text-[#181C1C]">
-                            <span className="material-symbols-outlined text-3xl">
-                                {isMenuOpen ? 'close' : 'menu'}
-                            </span>
+                        {/* Burger Icon Custom */}
+                        <button 
+                            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+                            className="p-2 text-[#181C1C] lg:hidden flex flex-col items-end gap-1.5 focus:outline-none"
+                            aria-label="Toggle Menu"
+                        >
+                            <span className={`h-0.5 bg-[#181C1C] transition-all duration-300 ${isMenuOpen ? 'w-6 translate-y-2 rotate-45' : 'w-6'}`}></span>
+                            <span className={`h-0.5 bg-[#181C1C] transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'w-4'}`}></span>
+                            <span className={`h-0.5 bg-[#181C1C] transition-all duration-300 ${isMenuOpen ? 'w-6 -translate-y-2 -rotate-45' : 'w-5'}`}></span>
                         </button>
                     </div>
                 </div>
 
-                {/* MOBILE MENU OVERLAY */}
-                <div className={`fixed inset-0 bg-white z-[55] lg:hidden transition-transform duration-500 pt-32 px-6 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                    <nav className="flex flex-col gap-8 text-center">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                onClick={(e) => handleScroll(e, link.href)}
-                                className="text-2xl font-serif text-[#181C1C] hover:text-[#c9a675]"
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                    </nav>
+                {/* MODAL FULL-SCREEN MOBILE MENU */}
+                <div 
+                    className={`fixed inset-0 bg-white z-[105] lg:hidden transition-all duration-500 ease-in-out ${
+                        isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
+                    }`}
+                >
+                    {/* Interior Mobile Menu */}
+                    <div className="flex flex-col h-full pt-32 pb-12 px-8 relative overflow-y-auto">
+                        
+                        {/* Background subtle grid agar selaras dengan Hero */}
+                        <div 
+                            className="absolute inset-0 opacity-[0.03] pointer-events-none"
+                            style={{
+                                backgroundImage: `linear-gradient(#181C1C 1px, transparent 1px), linear-gradient(90deg, #181C1C 1px, transparent 1px)`,
+                                backgroundSize: '30px 30px'
+                            }}
+                        ></div>
+
+                        <div className="relative z-10 flex flex-col h-full">
+                            <span className="text-[#c9a675] font-sans font-bold tracking-[0.3em] text-[10px] uppercase mb-8 opacity-60">Navigation</span>
+                            
+                            <nav className="flex flex-col gap-6 mb-12">
+                                {navLinks.map((link, i) => (
+                                    <Link
+                                        key={link.name}
+                                        href={link.href}
+                                        onClick={(e) => handleScroll(e, link.href)}
+                                        className={`text-4xl font-serif font-bold text-[#181C1C] transition-all duration-700 transform ${
+                                            isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
+                                        }`}
+                                        style={{ transitionDelay: `${i * 75}ms` }}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                ))}
+                            </nav>
+
+                            <div className={`mt-auto pt-8 border-t border-[#181C1C]/5 transition-all duration-700 delay-[400ms] ${
+                                isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                            }`}>
+                                <div className="mb-10">
+                                    <h4 className="text-[10px] font-sans font-bold tracking-[0.2em] text-[#c9a675] uppercase mb-4">Contact Details</h4>
+                                    <p className="text-xl font-serif text-[#181C1C] mb-1">lumerasgp@gmail.com</p>
+                                    <p className="text-xl font-serif text-[#181C1C]">+65 9084 6600</p>
+                                </div>
+                                
+                                <button 
+                                    onClick={() => {
+                                        const contactElem = document.getElementById('contact');
+                                        setIsMenuOpen(false);
+                                        setTimeout(() => contactElem?.scrollIntoView({ behavior: 'smooth' }), 300);
+                                    }}
+                                    className="w-full bg-[#181C1C] text-white py-5 rounded-2xl font-sans font-bold text-[11px] uppercase tracking-[0.2em] shadow-xl active:scale-[0.98] transition-transform"
+                                >
+                                    Request Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </header>
         </>
