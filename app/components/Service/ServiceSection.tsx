@@ -26,8 +26,7 @@ const services = [
 
 export default function ServiceSection() {
     return (
-        <section className="relative w-full bg-[#FAFAFA] py-24 lg:py-32 px-6 md:px-16 lg:px-24 overflow-hidden">
-
+        <section id="service" className="w-full bg-white py-24 lg:py-32 px-6 md:px-16 lg:px-24">
             {/* GRID BACKGROUND (Sangat Halus) */}
             <div
                 className="absolute inset-0 z-0 pointer-events-none opacity-[0.04]"

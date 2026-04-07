@@ -12,7 +12,7 @@ const steps = [
 
 export default function ProcessSection() {
     return (
-        <section className="w-full bg-white py-24 lg:py-32 px-6 md:px-16 lg:px-24">
+        <section id="process" className="w-full bg-white py-24 lg:py-32 px-6 md:px-16 lg:px-24 overflow-hidden">
             <div className="max-w-[1440px] mx-auto">
 
                 {/* Header Section */}

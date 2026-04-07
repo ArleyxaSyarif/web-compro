@@ -16,7 +16,6 @@ export default function ContactSection() {
     return (
         /* Section dengan padding yang identik dengan Navbar: px-6 md:px-16 lg:px-24 */
         <section id="contact" className="relative bg-white py-20 lg:py-32 px-6 md:px-16 lg:px-24 overflow-hidden border-t border-gray-50">
-
             {/* GRID BACKGROUND (Sangat Halus) */}
             <div
                 className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]"

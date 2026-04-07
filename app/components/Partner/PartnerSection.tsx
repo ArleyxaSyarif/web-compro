@@ -15,8 +15,7 @@ export default function Partnerships() {
     const duplicatedPartners = [...partners, ...partners];
 
     return (
-        <section className="pt-12 pb-16 px-6 lg:px-12 border-y border-[#d8c3ac]/10 bg-white overflow-hidden relative">
-
+        <section id="clients" className="w-full bg-white py-16 lg:py-24 overflow-hidden">
 
 
             {/* Definisi animasi CSS untuk Slider (Marquee) */}

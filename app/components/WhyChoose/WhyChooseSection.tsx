@@ -18,8 +18,8 @@ const valueProps = [
 export default function WhyChooseSection() {
     return (
         /* Section dengan padding yang selaras dengan Navbar (lg:px-24) */
-        <section className="w-full bg-[#f8f9f9] px-6 md:px-16 lg:px-24 py-20 lg:py-32 flex flex-col lg:flex-row items-center justify-between overflow-hidden gap-12 lg:gap-20">
-
+        <section id="why-us" className="w-full bg-[#f8f9f9] px-6 md:px-16 lg:px-24 py-20 lg:py-32 flex flex-col lg:flex-row items-center justify-between overflow-hidden gap-12 lg:gap-20">
+            {/* ... isi kon
             {/* ===== KOLOM KIRI: Teks (Dibuat lebih lebar 60% agar judul 2 baris muat) ===== */}
             <div className="w-full lg:w-[60%] flex flex-col justify-center">
 
